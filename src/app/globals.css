@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Space Grotesk";
+  --font-sans: "Inter";
+  --font-mono: "JetBrains Mono";
+  --radius: 14px;
+
+  --background: #5cc266;
+  --foreground: #15241b;
+  --card: #ffffff;
+  --card-foreground: #15241b;
+  --primary: #1e9e58;
+  --primary-foreground: #ffffff;
+  --secondary: #ecf6ee;
+  --secondary-foreground: #18814a;
+  --muted: #f1f7f2;
+  --muted-foreground: #7c8c82;
+  --accent: #ecf6ee;
+  --accent-foreground: #15241b;
+  --destructive: #e2664a;
+  --destructive-foreground: #ffffff;
+  --border: #e2ece4;
+  --input: #e2ece4;
+  --ring: #1e9e58;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply text-ink font-sans antialiased;
+    min-height: 100vh;
+    background-color:#D5FFAD;
+  }
+  :focus-visible {
+    outline: 2.5px solid #1e9e58;
+    outline-offset: 2px;
+    border-radius: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
