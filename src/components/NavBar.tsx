@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { History, LogIn, LogOut, UserPlus, ScanLine, Info, ImageUp } from "lucide-react";
+import { History, LogIn, LogOut, UserPlus, ScanLine, Info } from "lucide-react";
 import { useAuth } from "@/context/AuthContext";
 
 function NavBtn({ onClick, children }: { onClick: () => void; children: React.ReactNode }) {

@@ -107,7 +107,7 @@ export default function HistoryPage() {
 
                   {/* Optional description */}
                   {scan.description && (
-                    <p className="mb-3 text-[13px] italic text-ink-soft">"{scan.description}"</p>
+                    <p className="mb-3 text-[13px] italic text-ink-soft">&quot;{scan.description}&quot;</p>
                   )}
 
                   {/* Calories */}
