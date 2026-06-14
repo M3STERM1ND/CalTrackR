@@ -32,7 +32,7 @@ function looksObviouslyNonFood(image: File) {
  * Pretends to call a vision model. Adds latency so the scanning animation is
  * visible, and occasionally fails so error handling can be exercised.
  */
-export const mockProvider: FoodAnalyzer = (image, _description) =>
+export const mockProvider: FoodAnalyzer = (image) =>
   new Promise((resolve, reject) => {
     setTimeout(() => {
       if (looksObviouslyNonFood(image)) {
