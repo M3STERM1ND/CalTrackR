@@ -1,10 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { Suspense, useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { supabase } from "@/lib/supabase";
 
-export default function LoginPage() {
+function LoginForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const mode: "signin" | "signup" =
@@ -58,7 +58,6 @@ export default function LoginPage() {
   return (
     <main className="flex min-h-screen items-center justify-center px-4">
       <div className="w-full max-w-[400px]">
-        {/* Logo + title */}
         <div className="mb-8 flex flex-col items-center gap-3 text-center">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/caltrackR.png" alt="CalTrackR" className="h-16 w-16 object-contain" />
@@ -68,7 +67,6 @@ export default function LoginPage() {
           <p className="text-[14px] text-ink-soft">Track your calorie intake and macros in seconds.</p>
         </div>
 
-        {/* Card */}
         <div className="rounded-2xl bg-card p-7 shadow-card">
           <h2 className="mb-5 font-display text-[20px] font-semibold">
             {mode === "signin" ? "Sign in to your account" : "Create an account"}
@@ -136,5 +134,13 @@ export default function LoginPage() {
         </div>
       </div>
     </main>
+  );
+}
+
+export default function LoginPage() {
+  return (
+    <Suspense>
+      <LoginForm />
+    </Suspense>
   );
 }
