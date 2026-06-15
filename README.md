@@ -72,8 +72,3 @@ src/
 - Space Grotesk (display) · Inter (body) · JetBrains Mono (numeric readouts).
 - Macro bar widths reflect each macro's share of total calories (4/4/9 kcal/g),
   not raw grams.
-
-## Not included yet (by design)
-
-No auth, accounts, database, or scan history. This is the MVP those features can
-be layered onto later.
