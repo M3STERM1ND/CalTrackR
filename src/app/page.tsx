@@ -157,6 +157,7 @@ export default function Home() {
 
       <footer className="mt-7 text-center text-xs text-black font-bold">
         Nutrition estimates are AI-generated and may not be 100% accurate.
+        <div className="mt-1 font-normal text-ink-muted">&copy; 2026 CalTrackR. All rights reserved.</div>
       </footer>
     </main>
   );
